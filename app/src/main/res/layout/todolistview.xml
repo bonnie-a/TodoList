@@ -45,7 +45,7 @@
 
             <TextView
                 android:id="@+id/todoListName"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Todo List Name"
@@ -53,6 +53,7 @@
                 android:textColor="@color/colorTextPrimary"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/deleteTodoList"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 

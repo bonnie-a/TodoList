@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -28,7 +29,13 @@ public class TaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("List");
+
+        TextView title = findViewById(R.id.textView);
+
+        Bundle listName = getIntent().getExtras();
+        String name = listName.getString("todoListName");
+        title.setText(String.valueOf(name));
+
         setSupportActionBar(toolbar);
         Bundle bundle = getIntent().getExtras();
 

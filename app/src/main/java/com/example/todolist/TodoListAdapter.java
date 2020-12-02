@@ -46,6 +46,7 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.TodoLi
                 //Toast.makeText(context, "Clicking TodoList Id: " + todoList.getId(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(context, TaskActivity.class);
                 intent.putExtra("todoListId", todoList.getId());
+                intent.putExtra("todoListName", todoList.getName());
                 context.startActivity(intent);
             }
         });
